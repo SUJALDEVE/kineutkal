@@ -26,6 +26,23 @@
             body{background: rgb(160, 30, 255);
             background: linear-gradient(10deg, rgba(160, 30, 255, 1) 10%, rgba(215, 188, 252, 1) 100%);}
 
+            @media only screen and (max-width: 600px) {
+            h1,
+            h2,
+            h3,
+            .p {
+                padding: 10px;
+            }
+
+            img.centre {
+                margin-left: 50px; /* Adjusted margin for smaller screens */
+            }
+
+            ul.nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
         </style>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -35,31 +52,36 @@
 
     <!-- Example Code -->
 
-    <ul class="nav nav-pills" >
+    <ul class="nav nav-pills" style="display: flex;justify-content: flex-end;">
         <li class="nav-item">
-            <a class="btn btn-dark" aria-current="page" href="./home.html" style="margin-left: 20px;">Home</a>
+            <a aria-current="page" href="./home.html" style="margin-right: 20px;text-decoration: none;color: black;font-weight: 500;font-size: 20px;" class="links">Home</a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-dark" href="./product.html" style="margin-left: 20px;">Product:</a>
+            <a href="./product.html" style="margin-right: 20px;text-decoration: none;color: black;font-weight: 500;font-size: 20px;" class="links">Product</a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-dark" href="./software.html" style="margin-left: 20px;">Software</a>
+            <a href="./software.html" style="margin-right: 20px;text-decoration: none;color: black;font-weight: 500;font-size: 20px;" class="links">Software</a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-dark" aria-disabled="true" style="margin-left: 20px;">Software</a>
+            <a href="./support.html" style="margin-right: 20px;text-decoration: none;color: black;font-weight: 500;font-size: 20px;" class="links">Support</a>
         </li>
     </ul><br><br>
     <h1 style="text-align: center;">KineUtkal Pvt Ltd </h1>
-    <img src="./KineUtkal Pvt Ltd.jpg" alt="logo" class="centre" style="margin-left: 470px; border-radius: 40px;" >
+    <div style="display: flex;justify-content: center;">
+    <img src="./KineUtkal Pvt Ltd.jpg" alt="logo" class="centre" style=" border-radius: 40px;" >
+    </div>
     <h1 style="text-align: center;">Inspiring Innovation and Unveilling the mechanics of life </h1><br>
 <h3>Human Vibrations</h3><br><div style="display: flex; gap: 20px;">
+    <div style="display: flex;gap: 20px;">
 <img src="./vibration.jpg" alt="Vibrations" width="300px" height="200px" style="display: flex; gap: 20px; border-radius: 20px;">
 <p>Human vibration refers to the mechanical oscillations or movements that the human body is exposed to,
 often in an occupational or environmental context. These vibrations can be transmitted to the human body
 through various sources, and they can have both beneficial and harmful effects. Human vibration is an
 interdisciplinary field that involves biomechanics, occupational health, and engineering. Human vibration,
 which encompasses both whole-body vibration (WBV) and hand-arm vibration (HAV), is a critical
-consideration in various industries and working environments.</p></div>
+consideration in various industries and working environments.</p>
+    </div>
+</div>
     <!-- End Example Code -->
 </body>
 
