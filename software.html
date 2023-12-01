@@ -581,6 +581,16 @@ color:#7c455e;}
                 background: rgb(209, 154, 248);
                 background: linear-gradient(10deg, rgb(211, 163, 245) 10%, rgba(215, 188, 252, 1) 500%);
             }
+            .inputvalue {
+                margin-left: 70px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .buttonvalue {
+                border-radius: 10px;
+                border-color: #7C455E;
+                margin-bottom: 10px;
+            }
         </style>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
     </head>
@@ -728,15 +738,18 @@ vibration magnitude of the tool.
 <h3>DEAV</h3> <input type="number" style="margin-left: 20PX;"></BR><br><input type="color" style="width: 186px; height: 30px; margin-left: 20px;">
   <h3>DELV</h3><input type="number" style="margin-left: 20PX;"></BR><br><input type="color" style="width: 186px; height: 30px; margin-left: 20PX;">
 <h3>RISK LEVEL</h3>
-<canvas id="speedometer" width="440" height="220" style="display: flex; margin-left: 30px;">Canvas not
-    available.</canvas>
-<div>
-    <form id="drawTemp" style="margin-left: 110px;">
-        <input type="text" id="txtSpeed" name="txtSpeed" value="20" maxlength="2" />
-        <input type="button" value="DEAV" onclick="drawWithInputValue();">
-    </form>
-</div>
-<ul style="margin-left: 110px;">
+
+<body onload='draw(0);'>
+    <canvas id="speedometer" width="440" height="220">Canvas not available.</canvas>
+    <div>
+      <form id="drawTemp">
+        <input type="text" class="inputvalue" id="txtSpeed" name="txtSpeed" value="20" maxlength="2" />
+        <input type="button" class="buttonvalue" value="Draw" onclick="drawWithInputValue();">
+      </form>
+    </div>
+  </body>
+
+<ul style="margin-left: 57px;">
     <li>0-25 (Low Risk)</li>
     <li>25-55 (Medium Risk)</li>
     <li>55-80 (High Risk)</li>
